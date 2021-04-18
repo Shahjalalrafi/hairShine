@@ -1,0 +1,16 @@
+.hair-care {
+    padding: 100px;
+}
+.hair-care .img {
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: 1s ease-in;
+}
+
+.hair-care .img:hover {
+    filter: grayscale(0%);
+}
+
+.hair-details-box {
+    margin: 0px 0px 50px 100px;
+}

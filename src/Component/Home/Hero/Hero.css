@@ -1,0 +1,19 @@
+.hero {
+    background-image: url('../../../images/heroBg.jpg');
+    padding: 150px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: center;
+}
+
+.button {
+    background: #D3AD69;
+    color: white;
+}
+
+.button:hover {
+    border:2px solid #D3AD69;
+    background: black;
+    color: white;
+}
+

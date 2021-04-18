@@ -1,0 +1,23 @@
+/* .service {
+    width: 28%;
+    height: 200px;
+background: red;
+transition-property: width;
+transition-duration: 2s;
+} */
+
+.service {
+    transition-property: width;
+transition-duration: 2s;
+}
+
+.service:hover {
+    width: 20%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 780px) {
+    .service:hover {
+        width: 100%;
+    }
+  }

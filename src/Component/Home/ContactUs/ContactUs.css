@@ -1,0 +1,16 @@
+.contact-us {
+    background: url('../../../images/featureBg.jpg');
+    position: relative;
+}
+
+.contact-us::after {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    opacity: .9;
+    z-index: -5;
+}
