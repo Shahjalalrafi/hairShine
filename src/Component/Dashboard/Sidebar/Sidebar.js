@@ -11,7 +11,7 @@ const Sidebar = () => {
     const [logedInUser, setLogedInUser] = useContext(userContext)
 
     useEffect(() => {
-        fetch('http://localhost:5050/isAdmin', {
+        fetch('https://safe-escarpment-39469.herokuapp.com/isAdmin', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

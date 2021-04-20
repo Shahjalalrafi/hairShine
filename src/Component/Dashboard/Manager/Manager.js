@@ -9,14 +9,14 @@ const Manager = () => {
 
 
     const services = () => {
-        fetch('http://localhost:5050/services')
+        fetch('https://safe-escarpment-39469.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setAllService(data))
     }
 
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5050/serviceDelete/${id}`, {
+        fetch(`https://safe-escarpment-39469.herokuapp.com/serviceDelete/${id}`, {
             method: "DELETE"
         })
             .then(res => res.json())

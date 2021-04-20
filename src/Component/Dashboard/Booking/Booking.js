@@ -12,7 +12,7 @@ const Booking = () => {
     const email = logedInUser.email
 
     useEffect(() => {
-        fetch('http://localhost:5050/allBooking?email=' + email)
+        fetch('https://safe-escarpment-39469.herokuapp.com/allBooking?email=' + email)
         .then(res => res.json())
         .then(data => setServices(data))
     },[])

@@ -19,7 +19,7 @@ const ServiceCheckOut = () => {
             userName: logedInUser.name,
             email: logedInUser.email
         }
-        fetch('http://localhost:5050/booking', {
+        fetch('https://safe-escarpment-39469.herokuapp.com/booking', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -37,7 +37,7 @@ const ServiceCheckOut = () => {
     const [product, setProduct] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5050/services')
+        fetch('https://safe-escarpment-39469.herokuapp.com/services')
         .then(res => res.json())
         .then(result => {
             const myProduct = result.find(pd => {

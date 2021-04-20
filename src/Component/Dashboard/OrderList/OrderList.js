@@ -8,7 +8,7 @@ const OrderList = () => {
     const [orderList, setOrderList] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5050/bookingList')
+        fetch('https://safe-escarpment-39469.herokuapp.com/bookingList')
             .then(res => res.json())
             .then(data => setOrderList(data))
     }, [])

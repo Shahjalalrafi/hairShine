@@ -11,7 +11,7 @@ const MakeAdmin = () => {
         }
         console.log(formData)
 
-        fetch('http://localhost:5050/addAdmin', {
+        fetch('https://safe-escarpment-39469.herokuapp.com/addAdmin', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

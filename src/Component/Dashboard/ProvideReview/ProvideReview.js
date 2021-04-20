@@ -18,7 +18,7 @@ const ProvideReview = () => {
         }
         console.log(reviewDetails)
 
-        fetch('http://localhost:5050/addReview', {
+        fetch('https://safe-escarpment-39469.herokuapp.com/addReview', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

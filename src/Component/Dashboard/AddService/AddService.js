@@ -19,7 +19,7 @@ const AddService = () => {
         }
         console.log(formData)
 
-        fetch('http://localhost:5050/addService', {
+        fetch('https://safe-escarpment-39469.herokuapp.com/addService', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

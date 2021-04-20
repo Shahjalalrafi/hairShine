@@ -42,7 +42,7 @@ const Feature = () => {
         }
     ]
     return (
-        <section className='row feature bg-dark p-5 text-center'>
+        <section className='row feature bg-dark p-5  text-center'>
             <h2 className='text-white'>FEATURE PRODUCT</h2>
             {
                 serviceProvided.map(service => <FeatureDetails service={service} />)
