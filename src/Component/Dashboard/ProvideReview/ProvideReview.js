@@ -55,7 +55,7 @@ const ProvideReview = () => {
                 <Sidebar />
             </div>
             <div className="col-md-10">
-                <h2>Add review</h2>
+                <h2 className='text-center bg-dark text-white p-4'>Add review</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div class="mb-3">
                         <label name="name" class="form-label">Name</label>
@@ -70,7 +70,7 @@ const ProvideReview = () => {
                         <input type="file" class="form-control" name="file" {...register("file")} onChange={handleFile} />
                     </div>
 
-                    <button type="submit" class="btn button">Submit</button>
+                    <button type="submit" class="btn" style={{backgroundColor: 'black', color:'white'}}>Submit</button>
                 </form>
             </div>
         </div>

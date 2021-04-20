@@ -1,8 +1,9 @@
 import React from 'react';
 
 const OrderListDetails = ({ orderDetails }) => {
+
     return (
-        <div className='row m-auto p-5' style={{ background: 'rgb(218, 218, 218)' }}>
+        <div className='row m-auto p-5 ' style={{ background: 'rgb(218, 218, 218)' }}>
             <table className="col-md-12">
                 <tr>
                     <th className='py-2'>Name</th>
@@ -12,8 +13,8 @@ const OrderListDetails = ({ orderDetails }) => {
                     <th className='py-2'>Status</th>
                 </tr>
                 {
-                    orderDetails.map((order, index) => <tr>
-                        <td className='py-2'>{order.userName}</td>
+                    orderDetails.map((order, index) => <tr className="table-data">
+                        <td className='py-2 '>{order.userName}</td>
                         <td className='py-2'>{order.email}</td>
                         <td className='py-2'>{order.serviceName}</td>
                         <td className='py-2'>Credit Card</td>

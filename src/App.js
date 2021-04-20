@@ -10,6 +10,9 @@ import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 import Booking from './Component/Dashboard/Booking/Booking';
 import ProvideReview from './Component/Dashboard/ProvideReview/ProvideReview';
 import OrderList from './Component/Dashboard/OrderList/OrderList';
+import Manager from './Component/Dashboard/Manager/Manager';
+import MakeAdmin from './Component/Dashboard/MakeAdmin/MakeAdmin';
+import ServicePage from './Component/ServicePage/ServicePage';
 
 export const userContext = createContext()
 
@@ -23,30 +26,42 @@ function App() {
           <Route path='/home'>
             <Home />
           </Route>
+          
+          <Route path='/services'>
+            <ServicePage />
+          </Route>
 
           <Route path='/login'>
             <Login />
           </Route>
 
-          <Route path='/admin'>
+          <PrivateRoute path='/admin'>
             <Dashboard />
-          </Route>
+          </PrivateRoute>
           
-          <Route path='/addService'>
+          <PrivateRoute path='/addService'>
             <AddService />
-          </Route>
+          </PrivateRoute>
           
-          <Route path='/booking'>
+          <PrivateRoute path='/booking'>
             <Booking />
-          </Route>
+          </PrivateRoute>
           
-          <Route path='/review'>
+          <PrivateRoute path='/review'>
             <ProvideReview />
-          </Route>
+          </PrivateRoute>
           
-          <Route path='/order-list'>
+          <PrivateRoute path='/order-list'>
             <OrderList />
-          </Route>
+          </PrivateRoute>
+          
+          <PrivateRoute path='/make-admin'>
+            <MakeAdmin />
+          </PrivateRoute>
+          
+          <PrivateRoute path='/manage-service'>
+            <Manager />
+          </PrivateRoute>
 
           <PrivateRoute path='/service-check-out/:id'>
             <ServiceCheckOut />
@@ -67,3 +82,12 @@ function App() {
 }
 
 export default App;
+
+
+// client side: https://github.com/Porgramming-Hero-web-course/complete-website-client-Shahjalalrafi
+
+// server side: https://github.com/Porgramming-Hero-web-course/complete-website-server-Shahjalalrafi
+
+// live site: https://hairshine-867d2.web.app
+
+// env: https://safe-escarpment-39469.herokuapp.com/

@@ -5,6 +5,8 @@ import "firebase/firestore";
 import firebaseConfig from './Firebase.config';
 import { userContext } from '../../../App';
 import { useHistory, useLocation } from 'react-router';
+import Footer from '../Footer/Footer';
+import Navbar from '../Navbar/Navbar';
 
 if (firebase.apps.length === 0) {
     firebase.initializeApp(firebaseConfig);
@@ -18,7 +20,7 @@ const Login = () => {
 
     let { from } = location.state || { from: { pathname: "/" } };
 
-    const handleGoogleSingIn = () => {
+    const handleGoogleSignIn = () => {
         var googleProvider = new firebase.auth.GoogleAuthProvider();
 
         firebase.auth().signInWithPopup(googleProvider)
@@ -35,11 +37,30 @@ const Login = () => {
             }).catch((error) => {
                 console.log(error.message)
             });
-
     }
+
+    const handlegoogleSignOut = () => {
+        firebase.auth().signOut().then(() => {
+            const logOutInfo = {
+                name: '',
+                email: '',
+                photo: ''
+            }
+            setLogedInUser(logOutInfo)
+          }).catch((error) => {
+              console.log(error)
+          });
+    }
+
     return (
-        <div>
-            <button className='btn button' onClick={handleGoogleSingIn}>sign in with google</button>
+        <div className=''>
+            <Navbar />
+            <div className='py-5 text-center'>
+            {
+                logedInUser.email ? <button className='btn button' onClick={handlegoogleSignOut}>sign out with google</button> : <button className='btn button' onClick={handleGoogleSignIn}>sign in with google</button>
+            }
+            </div>
+            <Footer />
         </div>
     );
 };
